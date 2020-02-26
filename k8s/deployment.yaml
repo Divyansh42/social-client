@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-client
+  labels:
+    app: my-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-client
+  template:
+    metadata:
+      labels:
+        app: my-client
+    spec:
+      containers:
+        - name: my-client
+          image: quay.io/vinamra2807/social-client:3
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REACT_APP_BASE_URL
+              # value: "http://192.168.39.15:32689"
+              # value: "http://192.168.39.15:32504"
+              value: "http://my-server-social-platform.apps.ci-ln-yxbkki2-d5d6b.origin-ci-int-aws.dev.rhcloud.com"
