@@ -24,4 +24,4 @@ spec:
             - name: REACT_APP_BASE_URL
               # value: "http://192.168.39.15:32689"
               # value: "http://192.168.39.15:32504"
-              value: "http://my-server-social-platform.apps.ci-ln-201sdbk-d5d6b.origin-ci-int-aws.dev.rhcloud.com"
+              value: "http://my-server-social-platform.apps.vinamrajain.devcluster.openshift.com"
